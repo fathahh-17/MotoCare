@@ -1,0 +1,686 @@
+{
+  "info": {
+    "_postman_id": "7e6dbfb8-2b5d-4ed1-b7ad-22f0a54c1001",
+    "name": "MotoCare API",
+    "description": "Koleksi pengujian CRUD API Laravel MotoCare. Ubah baseUrl bila alamat server berbeda. Sesuaikan ID dan data relasi dengan database.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://127.0.0.1:8000/api"
+    }
+  ],
+  "item": [
+    {
+      "name": "Pelanggan - GET Semua",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/pelanggan",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pelanggan"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pelanggan - GET Detail (ID 1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/pelanggan/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pelanggan",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pelanggan - POST Tambah",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama_lengkap\": \"Budi Santoso\",\n  \"no_hp\": \"081234567890\",\n  \"alamat_pelanggan\": \"Takengon\",\n  \"pekerjaan\": \"Wiraswasta\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pelanggan",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pelanggan"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pelanggan - PUT Ubah (ID 1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama_lengkap\": \"Budi Santoso\",\n  \"no_hp\": \"081234567890\",\n  \"alamat_pelanggan\": \"Takengon\",\n  \"pekerjaan\": \"Wiraswasta\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pelanggan/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pelanggan",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pelanggan - DELETE Hapus (ID 1)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/pelanggan/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pelanggan",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kendaraan - GET Semua",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/kendaraan",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "kendaraan"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kendaraan - GET Detail (ID 1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/kendaraan/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "kendaraan",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kendaraan - POST Tambah",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"no_plat\": \"BL 1234 AB\",\n  \"jenis_kendaraan\": \"Matic\",\n  \"no_stnk\": \"123456789\",\n  \"tahun_pembuatan\": 2022,\n  \"nama_pemilik\": \"Budi Santoso\",\n  \"warna_kendaraan\": \"Hitam\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/kendaraan",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "kendaraan"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kendaraan - PUT Ubah (ID 1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"no_plat\": \"BL 1234 AB\",\n  \"jenis_kendaraan\": \"Matic\",\n  \"no_stnk\": \"123456789\",\n  \"tahun_pembuatan\": 2022,\n  \"nama_pemilik\": \"Budi Santoso\",\n  \"warna_kendaraan\": \"Hitam\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/kendaraan/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "kendaraan",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Kendaraan - DELETE Hapus (ID 1)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/kendaraan/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "kendaraan",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daftar Service - GET Semua",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/daftar-service",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "daftar-service"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daftar Service - GET Detail (ID 1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/daftar-service/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "daftar-service",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daftar Service - POST Tambah",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"no_plat\": \"BL 1234 AB\",\n  \"id_pelanggan\": 1,\n  \"keluhan_kendaraan\": \"Mesin sulit dinyalakan\",\n  \"tanggal_servis\": \"2026-11-19\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/daftar-service",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "daftar-service"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daftar Service - PUT Ubah (ID 1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"no_plat\": \"BL 1234 AB\",\n  \"id_pelanggan\": 1,\n  \"keluhan_kendaraan\": \"Mesin sulit dinyalakan\",\n  \"tanggal_servis\": \"2026-11-19\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/daftar-service/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "daftar-service",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Daftar Service - DELETE Hapus (ID 1)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/daftar-service/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "daftar-service",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Data Service - GET Semua",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/data-service",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "data-service"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Data Service - GET Detail (ID 1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/data-service/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "data-service",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Data Service - POST Tambah",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id_servis_pelanggan\": 1,\n  \"estimasi_service\": 150000,\n  \"nama_mekanik\": \"Andi\",\n  \"sparepart_pengganti\": \"Busi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/data-service",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "data-service"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Data Service - PUT Ubah (ID 1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id_servis_pelanggan\": 1,\n  \"estimasi_service\": 150000,\n  \"nama_mekanik\": \"Andi\",\n  \"sparepart_pengganti\": \"Busi\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/data-service/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "data-service",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Data Service - DELETE Hapus (ID 1)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/data-service/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "data-service",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pembayaran - GET Semua",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/pembayaran",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pembayaran"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pembayaran - GET Detail (ID 1)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/pembayaran/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pembayaran",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pembayaran - POST Tambah",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id_servis_pelanggan\": 1,\n  \"jumlah_biaya_servis\": 150000,\n  \"jenis_pembayaran\": \"Cash / Tunai\",\n  \"keterangan\": \"Lunas\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pembayaran",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pembayaran"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pembayaran - PUT Ubah (ID 1)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id_servis_pelanggan\": 1,\n  \"jumlah_biaya_servis\": 150000,\n  \"jenis_pembayaran\": \"Cash / Tunai\",\n  \"keterangan\": \"Lunas\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/pembayaran/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pembayaran",
+            "1"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pembayaran - DELETE Hapus (ID 1)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/pembayaran/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "pembayaran",
+            "1"
+          ]
+        }
+      }
+    }
+  ]
+}
